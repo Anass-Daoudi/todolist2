@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anass</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css"/>
+</head>
+<body>
+<div>
+    <ul>
+        <% for(var i = 0;i < todo.length;i++){
+        %>
+        <li>
+            <a href="/remove<%= i %>"><img src='images/1.png' width="20"/> </a>
+            <%= todo[i] %><br/>
+        </li>
+        <% } %>
+    </ul>
+</div>
+<div>
+    <form method="post" action="/add">
+        <h4>What have I to do?</h4>
+        <input type="text" name="todo" autofocus/>
+        <input type="submit" value="Add"/>
+    </form>
+</div>
+<div>
+    <form method="post" action="/destroySession">
+        <input type="submit" value="Destroy my session"/>
+    </form>
+</div>
+</body>
+</html>
