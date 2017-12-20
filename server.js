@@ -1,6 +1,3 @@
-/**
- * Created by hp on 18/08/2017.
- */
 const express = require('express');
 const morgan = require('morgan');
 const session = require('express-session');
